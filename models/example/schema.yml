@@ -1,21 +1,29 @@
-
 version: 2
 
+sources:
+- name: Ps_FX_ETL_DB_Param.p_Orcl_Db_Svr
+  tables:
+- name: Oci_Tmp_Ods_Ap_Exp_Rpt_Lines_All
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+- name: DSfilr_Lnk_Xfm_To_Etl_All_Reject_2Out
+  description: " Transformation Name ->DSfilr_Lnk_Xfm_To_Etl_All_Reject_2, Transformation Type ->Filter"	
+- name: Oci_Etl_All_RejectionOut
+  description: " Transformation Name ->Oci_Etl_All_Rejection, Transformation Type ->Target"	
+- name: Lnk_Xfm_To_Stg_Reject_2Out
+  description: " Transformation Name ->Lnk_Xfm_To_Stg_Reject_2, Transformation Type ->Expression"	
+- name: DSstgVar_Xfm_ColumnsOut
+  description: " Transformation Name ->DSstgVar_Xfm_Columns, Transformation Type ->Expression"	
+- name: Oci_Tmp_Ods_Ap_Exp_Rpt_Lines_AllOut
+  description: " Transformation Name ->Oci_Tmp_Ods_Ap_Exp_Rpt_Lines_All, Transformation Type ->Source"	
+- name: Lnk_Xfm_To_Etl_All_Reject_2Out
+  description: " Transformation Name ->Lnk_Xfm_To_Etl_All_Reject_2, Transformation Type ->Expression"	
+- name: Oci_Stg_Reject_Exp_RptOut
+  description: " Transformation Name ->Oci_Stg_Reject_Exp_Rpt, Transformation Type ->Target"	
+- name: DSfilr_Lnk_Ds_Pfl_Expense_Report_Insert_2Out
+  description: " Transformation Name ->DSfilr_Lnk_Ds_Pfl_Expense_Report_Insert_2, Transformation Type ->Filter"	
+- name: Lnk_Ds_Pfl_Expense_Report_Insert_2Out
+  description: " Transformation Name ->Lnk_Ds_Pfl_Expense_Report_Insert_2, Transformation Type ->Expression"	
+- name: DS_Pfl_Expense_ReportOut
+  description: " Transformation Name ->DS_Pfl_Expense_Report, Transformation Type ->Target"	
+- name: DSfilr_Lnk_Xfm_To_Stg_Reject_2Out
+  description: " Transformation Name ->DSfilr_Lnk_Xfm_To_Stg_Reject_2, Transformation Type ->Filter"	
