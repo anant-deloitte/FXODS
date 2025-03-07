@@ -40,3 +40,10 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+vars:
+  # The `start_date` variable will be accessible in all resources
+    p_Batch_ID: '2016-06-01'
+    p_Staging_Table_Name: 'p_Staging_Table_Name'
+    p_Performance_Table_Name: 'p_Performance_Table_Name'
+    p_Reprocess_Record_Threshold: 'p_Reprocess_Record_Threshold'
+    

@@ -1,0 +1,6 @@
+version: 2
+sources:
+  - name: ITSS_AP
+    tables:
+      - name: AP_EXPENSE_REPORT_LINES_ALL
+        description: "Table containing AP expense data"
