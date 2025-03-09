@@ -1,0 +1,5 @@
+With STG_ODS_AP_EXP_RPT_LINES_ALL as 
+(
+    select * from ODS.ITSS_AP.AP_EXPENSE_REPORT_LINES_ALL
+)
+select * from STG_ODS_AP_EXP_RPT_LINES_ALL
