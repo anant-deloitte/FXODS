@@ -21,7 +21,7 @@ WITH STG_PFL_EXP_RPT as
         --OPERATION,
         --DS_PROCESSED,
         --REPROCESS_COUNTER
-        FROM  ODS.ITSS_AP.AP_EXPENSE_REPORT_LINES_ALL LIMIT 1000
+        FROM  {{ ref('STG_ODS_AP_EXP_RPT_LINES_ALL') }} LIMIT 1000
       /*  ( SELECT STG.*,  row_number() over( order by DB_TXN_SEQ_NO) row_number FROM ODS.ITSS_AP.AP_EXPENSE_REPORT_LINES_ALL STG
         WHERE DS_PROCESSED = 0   and OPERATION <> 'NA'
         ) */
