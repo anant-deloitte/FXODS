@@ -14,14 +14,15 @@ WITH STG_PFL_EXP_RPT as
         ORG_ID,
         ITEMIZATION_PARENT_ID,
         CODE_COMBINATION_ID,
-        REPORT_HEADER_ID 
-        --TABLE_TXN_SEQ_NO,
-        --DB_TXN_SEQ_NO,
-        --LOAD_DT,
-        --OPERATION,
-        --DS_PROCESSED,
-        --REPROCESS_COUNTER
-        FROM  {{ ref('STG_ODS_AP_EXP_RPT_LINES_ALL') }} LIMIT 1000
+        REPORT_HEADER_ID ,
+        NULL as TABLE_TXN_SEQ_NO,
+        NULL as DB_TXN_SEQ_NO,
+        NULL as LOAD_DT,
+        NULL as OPERATION,
+        NULL as DS_PROCESSED,
+        NULL as REPROCESS_COUNTER,
+        100 as Batch_ID
+        FROM  {{ ref('STG_ODS_AP_EXP_RPT_LINES_ALL') }} LIMIT 10000
       /*  ( SELECT STG.*,  row_number() over( order by DB_TXN_SEQ_NO) row_number FROM ODS.ITSS_AP.AP_EXPENSE_REPORT_LINES_ALL STG
         WHERE DS_PROCESSED = 0   and OPERATION <> 'NA'
         ) */
