@@ -1,3 +1,10 @@
+-- Truncate and create
+{{ config(
+    materialized='table', 
+    schema='ITSS_AP',    
+    alias='j_R12_300_Stg_PFL_EXPENSE_REPORT_DB_Ld'
+) }}
+
 WITH STG_PFL_EXP_RPT as 
 (
     --j_R12_300_Stg_PFL_EXPENSE_REPORT_DB_Ld

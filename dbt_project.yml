@@ -40,6 +40,7 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+    +materialized: table
 vars:
   # The `start_date` variable will be accessible in all resources
     p_Batch_ID: 5555
