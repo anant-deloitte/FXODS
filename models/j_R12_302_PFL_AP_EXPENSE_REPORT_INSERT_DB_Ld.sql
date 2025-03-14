@@ -9,7 +9,7 @@ select * from PFL_EXPENSE_RPT_INSERT_DB
 {{ config(
     materialized='table', 
     schema='ITSS_AP',    
-    alias='PFL_EXPENSE_RPT_INSERT_DB'
+    alias='j_R12_302_PFL_AP_EXPENSE_REPORT_INSERT_DB_Ld'
 ) }}
 
 With Oci_Stg_Reject_Exp_Rpt_2Out as (
