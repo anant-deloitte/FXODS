@@ -29,7 +29,7 @@ WITH STG_PFL_EXP_RPT as
         NULL as DS_PROCESSED,
         NULL as REPROCESS_COUNTER,
         100 as Batch_ID
-        FROM  {{ ref('STG_ODS_AP_EXP_RPT_LINES_ALL') }} LIMIT 10000
+        FROM  {{ ref('STG_ODS_AP_EXP_RPT_LINES_ALL') }} 
       /*  ( SELECT STG.*,  row_number() over( order by DB_TXN_SEQ_NO) row_number FROM ODS.ITSS_AP.AP_EXPENSE_REPORT_LINES_ALL STG
         WHERE DS_PROCESSED = 0   and OPERATION <> 'NA'
         ) */
